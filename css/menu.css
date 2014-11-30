@@ -1,0 +1,321 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu
+ * @data 30.06.2009
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu">
+ *      <ul class="menu">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <ul><li><a href="#"><span>level 3</span></a></li></ul>
+ *                  </li>
+ *              </ul>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu::base */
+
+#current
+{
+	font-weight:bold;
+}
+bjqs.#image
+{
+	width:900;
+	height:350;
+}
+body {
+	
+	margin-left:50px;
+	margin-right:50PX;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#E4E4E4;
+	font-size: 16px;
+	color: #181B20;
+}
+div.outline
+{
+	width:1050px;
+	height:auto;
+	margin-top: -15px;
+	background-color:white;
+	
+	Border-radius:6px;
+	align:center;
+	padding-top:0px;
+	
+	position:relative;
+	z-index:100px;
+	-webkit-box-shadow: 4px 3px 4px 2px #666666;
+
+}
+div#menu {
+    height:43px;
+	width:85%;
+
+    background:url(images/main-bg.png) repeat-x;
+	margin-right:0px;
+	-webkit-box-shadow: 1px 1px 2px 2px #666666;
+	Border-radius:6px;
+	
+}
+
+div#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+	margin-top:0px;
+}
+div#menu ul.menu {
+    padding-left: 40px;
+}
+
+div#menu li {
+	
+    position: relative;
+    z-index: 9;
+    margin: 0;
+    padding: 0 5px 0 0;
+    display: block;
+    float: left;
+}
+div#menu li:hover>ul {
+    left: -2px;
+}
+
+div#menu a {
+    position: relative;
+    z-index: 10;
+    height: 41px;
+    display: block;
+    float: left;
+    line-height: 41px;
+    text-decoration: none;
+    font: normal 14px Century Gothic;
+}
+div#menu a:hover, div#menu a:hover span { color: #fff; }
+div#menu li.current a { }
+
+div#menu span {
+    display: block;
+    
+    background-repeat: no-repeat;
+    background-position: 95% 0;
+}
+div#menu ul ul a.parent span {
+    background-position:95% 8px;
+   
+}
+
+div#menu ul ul a.parent:hover span {
+}
+
+/* menu::level1 */
+div#menu a {
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+    color: #e5e5e5;
+}
+div#menu span {
+    margin-top: 5px;
+}/**@replace#1*/
+div#menu li { background: url(images/main-delimiter.png) 98% 4px no-repeat; }
+div#menu li.last { background: none; }
+
+/* menu::level2 */
+div#menu ul ul li { background: none; z-index:999px; }
+div#menu ul ul {
+    position: absolute;
+    top: 38px;
+    left: -999em;
+    width: 143px;
+    padding: 5px 0 0 0;
+    background: rgb(45,45,45);
+    margin-top:1px;
+	opacity:0.6;
+	z-index:999px;
+}
+div#menu ul ul a {
+    padding: 0 0 0 20px;
+    height: auto;
+    float: none;
+    display: block;
+    line-height: 37px;
+    color: rgb(169,169,169);
+}
+div#menu ul ul span {
+    margin-top: 0;
+    padding-right: 15px;
+    _padding-right: 20px;
+    color: rgb(169,169,169);
+}
+div#menu ul ul a:hover span {
+    color: #fff;
+}
+div#menu ul ul li.last { background: none; }
+div#menu ul ul li {
+    width: 100%;
+}
+
+/* menu::level3 */
+div#menu ul ul ul {
+    padding: 0;
+    margin: -38px 0 0 163px !important;
+    margin-left:172px;
+}
+
+/* colors */
+div#menu ul ul ul { background: rgb(41,41,41); }
+div#menu ul ul ul ul { background: rgb(38,38,38); }
+div#menu ul ul ul ul { background: rgb(35,35,35); }
+
+/* lava lamp */
+div#menu li.back {
+    background: url(images/lava.png) no-repeat right -44px !important;
+    background-image: url(images/lava.gif);
+    width: 13px;
+    height: 44px;
+    z-index: 8;
+    position: absolute;
+    margin: -1px 0 0 -5px;
+}
+div#menu li.back .left {
+    background: url(images/lava.png) no-repeat top left !important;
+    background-image: url(images/lava.gif);
+    height: 44px;
+    margin-right: 8px;
+}
+.down
+{
+height:40px;
+display:none;
+
+
+}
+
+.showhim:hover .down{
+
+-webkit-transition:height .5s ease;
+	-moz-transition:height .5s ease;
+	-o-transition:height .5s ease;
+	-ms-transition:height .5s ease;
+display : block;
+}
+img.tabs
+{
+height:250px;
+width:350;
+}
+
+table.tabs
+{
+width:90%;
+padding:50px;
+margin-left:-1.4%;
+ margin-top:-120px;"
+}
+.sitemap1
+{
+background-color:#0F0F0F;
+background: -moz-gradient(linear, 0% 0%, 0% 100%, from(#0F0F0F), to(#000000));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0F0F0F), to(#1F1F1F));
+font-family: Arial, Helvetica, sans-serif;
+color:#fff;
+font-size:11px;
+margin:0px;
+padding-bottom:10px;
+padding-top:10px;
+
+}
+td.sitemap
+{
+color:#fff;
+border-left-color:#FFFFFF;
+text-align:center;
+}
+.sitemap a
+{
+text-decoration:none;
+color:#fff;
+}
+.sitemap a:hover
+{
+text-decoration:none;
+color:#C0C0C0;
+
+}
+.scroller
+{
+width:50%;
+height:20px;
+margin-left:25%;
+margin-top:20px;
+font-size:12px;
+}
+
+// other page ka
+
+
+
+
+/* content */
+.container_c { background:#fff url(images/content_bg.gif) top repeat-x;}
+.content { margin:0 auto; padding:25px 50px 30px 50px; width:900px;}
+.content img.left { margin:10px 25px 30px 0; padding:0; border:none; float:left;}
+.content img.right { margin:10px 40px 40px 40px; padding:0; border:none; float:right;}
+.content img.portfolio { margin:10px 25px 20px 0; padding:0; border:none; float:left;}
+.content p.header { margin:0; padding:6px 0 0 0; width:560px; float:right;}
+.content ul { margin:0; padding:0 0 20px 0; width:340px; list-style:none;}
+.content li { margin:0; padding:0 0 0 25px; line-height:2.5em; background:url(images/li_circle.gif) no-repeat left; border-bottom:solid 1px #c9c9c9;}
+.content li a { color:#505050; text-decoration:none;}
+.content li a:active { color:#329bd4; text-decoration:none;}
+.content li a:hover { color:#329bd4; text-decoration:none;}
+.subcontent1 { margin:40px 0 0 0; padding:0;}
+.subcontent1hr { margin:40px 0 0 0; padding:0 0 30px 0; border-bottom:0px solid #bcbcbc;}
+.subcontent2 { margin:40px 30px 0 0; padding:0; float:left; width:420px;}
+.subcontent2hr { margin:40px 0 0 0; padding:0 0 0 30px; float:left; width:415px; border-left:solid 1px #bcbcbc;}
+.subcontent3 { margin:40px 0 0 0; padding:0; float:left; width:580px;}
+.subcontent4 { margin:40px 0 0 30px; padding:0; float:left; width:270px;}
+.subcontent5left { margin:20px 25px 0 0; padding:0; float:left; width:425px;}
+.subcontent5right { margin:20px 0 0 25px; padding:0; float:left; width:425px;}
+.subcontent5hr { margin:0; padding:20px 0; border-bottom:1px solid #bcbcbc;}
+.subcontent6left { margin:40px 30px 0 0; padding:0; float:left; width:420px;}
+.subcontent6right { margin:40px 0 0 30px; padding:0; float:left; width:420px;}
+
+/* contact */
+#contactform { margin:0; padding:0;}
+#contactform * { color:#666;}
+#contactform ol { margin:0; padding:0; list-style:none;}
+#contactform li { margin:0; padding:0; background:none; border:none; display:block;}
+#contactform li.buttons { margin:5px 0 5px 0;}
+#contactform label { float:left; margin:0; width:80px; padding:3px 10px; font:normal 12px Arial, Helvetica, sans-serif; color:#555e67; text-transform:capitalize;}
+#contactform label span { font:normal 10px Arial, Helvetica, sans-serif;}
+#contactform input.text { width:420px; border:1px solid #555e67; margin:5px 0; padding:5px 2px; height:15px; background:#fff;}
+#contactform textarea { width:420px; border:1px solid #555e67; margin:10px 0; padding:2px; background:#fff; height:250px;}
+#contactform li.buttons input { padding:0; margin:0 0 0 100px; border:0; color:#FFF; float:left;}
+#contactform li.buttons input.clear { padding:0; margin:0 0 20px 20px; width:54px; height:29px; float:left; background:url(images/btn_clear.gif);}
+p.response { text-align:center; color:#2c2c2c; font:normal 11px Arial, Helvetica, sans-serif; line-height:1.8em; width:auto;}\
+
+#productform { margin:0; padding:0;}
+#productform * { color:#666;}
+#productform ol { margin:0; padding:0; list-style:none;}
+#productform li { margin:0; padding:0; background:none; border:none; display:block;}
+#productform li.buttons { margin:5px 0 5px 0;}
+#productform label { float:left; margin:0; width:80px; padding:3px 10px; font:normal 12px Arial, Helvetica, sans-serif; color:#555e67; text-transform:capitalize;}
+#productform label span { font:normal 10px Arial, Helvetica, sans-serif;}
+#productform input.text { width:420px; border:1px solid #555e67; margin:5px 0; padding:5px 2px; height:15px; background:#fff;}
+#productform li.buttons input { padding:0; margin:0 0 0 100px; border:0; color:#FFF; float:left;}
+#productform li.buttons input.clear { padding:0; margin:0 0 20px 20px; width:54px; height:29px; float:left; background:url(images/btn_clear.gif);}
+p.response { text-align:center; color:#2c2c2c; font:normal 11px Arial, Helvetica, sans-serif; line-height:1.8em; width:auto;}
+
+
+
+
+
